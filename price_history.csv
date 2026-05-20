@@ -1,0 +1,78 @@
+product_id,product_name,current_price,original_price,discounted_price,on_sale,last_modified_at
+63498b1b-d173-45c5-874d-d437fdbb8b42,I Love This Yarn,3.49,4.99,3.49,True,2026-05-10T05:11:13.365Z
+990d04ea-ded8-4247-b8c3-a26d2bd8ce3b,Baby Bee Sweet Delight Twist Yarn,4.54,6.49,4.54,True,2026-05-10T05:07:53.207Z
+b9ff7cbb-ed0d-49a7-8ae7-a0929105d27b,Yarn Bee Eternal Bliss Yarn,5.59,7.99,5.59,True,2026-05-10T05:10:25.697Z
+472933f7-e3eb-4c42-ade9-5b42052dc318,Yarn Bee Sugarwheel Sparkle Yarn,5.59,7.99,5.59,True,2026-05-10T05:07:47.141Z
+85a0e532-9714-4f0d-a13b-0c20729b36c8,I Love This Cotton Yarn,2.79,3.99,2.79,True,2026-05-10T05:06:25.455Z
+cab7cee6-b138-4c9d-a82b-5ab85dc662f3,Yarn Bee Soft Secret Yarn,4.19,5.99,4.19,True,2026-05-10T05:10:10.034Z
+e35f7a5d-d369-4e7d-bd98-30d9cbd883f6,Crafter's Secret Big Idea Yarn,8.39,11.99,8.39,True,2026-05-10T05:09:20.060Z
+858b99bc-a8a0-405b-b85a-4efc3174aa70,Yarn Bee Beginner Yarn,2.44,3.49,2.44,True,2026-05-10T05:08:23.135Z
+d55a269f-c18c-4fc1-9be8-35f24a676d03,Stonewash Print I Love This Yarn,3.49,4.99,3.49,True,2026-05-10T05:11:08.522Z
+f36f2a4f-2785-4a53-93f9-e5ca64898f84,Yarn Bee Mini Maker Yarn,0.9,1.29,0.9,True,2026-05-10T05:08:11.695Z
+a5bf0255-0c7d-45b9-b3d1-e66faa4fb4b4,Yarn Bee Soft & Sleek Print Yarn,3.84,5.49,3.84,True,2026-05-10T05:10:56.268Z
+f83d6aa1-84c3-41ba-b874-4a02e3d841fd,Yarn Bee Sugarwheel Cotton Sparkle Yarn,5.94,8.49,5.94,True,2026-05-10T05:10:57.298Z
+8d10c4e5-6261-4c89-bb6f-f8c65da6b31d,Baby Bee Snugs & Kisses Yarn,6.29,8.99,6.29,True,2026-05-10T05:09:38.828Z
+a24344ed-65b8-4ff5-8afc-9fa728295093,White Sparkle I Love This Cotton Sparkle Yarn,3.14,4.49,3.14,True,2026-05-10T05:12:30.217Z
+f7f124fe-4817-485a-a880-57a02f179f76,Baby Bee Sweet Delight Chunky Yarn,4.19,5.99,4.19,True,2026-05-10T05:08:22.240Z
+09d36717-cdea-4256-8c8a-e3867a51372d,Baby Bee Sweet Delight Print Yarn,4.54,6.49,4.54,True,2026-05-10T05:08:15.705Z
+cd7a2b7b-4c42-4724-a54b-986ca186ac06,Yarn Bee Soft & Sleek Yarn,3.49,4.99,3.49,True,2026-05-10T05:06:58.033Z
+1184a4bc-22e1-4a38-9c7e-dd41e2d2316e,Yarn Bee Tender Touch Yarn,2.79,3.99,2.79,True,2026-05-10T05:07:30.971Z
+ebcdbcbd-5737-4551-ae40-cf80d53b3ec9,Yarn Bee Sugarwheel Yarn,5.59,7.99,5.59,True,2026-05-10T05:08:08.380Z
+4b0f7a27-ba0d-4cf8-aa8f-b907b30b6dec,Baby Bee Adore-A-Ball Bulky Yarn,3.49,4.99,3.49,True,2026-05-10T05:12:36.100Z
+4e16aaa8-ea5a-4997-9085-9a565345baef,Yarn Bee Sugarwheel Cotton Yarn,5.94,8.49,5.94,True,2026-05-10T05:10:00.208Z
+d046fb82-115b-4aa7-a250-fb97d6e98e6e,Yarn Bee Velvety Smooth Aran Yarn,3.84,5.49,3.84,True,2026-05-10T05:10:25.826Z
+f090521a-bfc5-40b4-914d-fec5f88d59a0,Crafter's Secret Variegated Cotton Yarn,2.09,2.99,2.09,True,2026-05-10T05:10:48.404Z
+599fbbbc-fdce-4ae0-8eb5-294659c3ce75,Baby Bee Soft + Snuggly Yarn,4.54,6.49,4.54,True,2026-05-10T05:11:57.032Z
+b8875aaf-48b3-4f87-a6b8-eabf21d733f3,Print I Love This Yarn,3.49,4.99,3.49,True,2026-05-10T05:09:35.819Z
+cd4a5499-bb2b-4616-8505-9e8d93caf5bc,Tweed I Love This Yarn,3.49,4.99,3.49,True,2026-05-10T05:06:37.420Z
+a8efa3a6-8388-43bd-acf4-69c3c7ee5d78,Crafter's Secret Big Idea Yarn,8.39,11.99,8.39,True,2026-05-10T05:11:01.660Z
+0ffcfb79-c28a-43d0-afac-fbb9827ad2a5,Print I Love This Cotton Yarn,3.14,4.49,3.14,True,2026-05-10T05:11:30.187Z
+b371bbf1-4cbd-49a4-b5d0-9d8db1da9311,Yarn Bee Bejeweled Sequin Yarn,5.99,5.99,,,2026-04-08T20:28:42.871Z
+23ff6da0-5c40-4c63-be46-58839f5f2e81,Baby Bee Stork Struck Yarn,4.19,5.99,4.19,True,2026-05-10T05:08:36.337Z
+928cc761-f240-4fa7-95b2-d81adaa81013,Yarn Bee Cozy Occasion Yarn,3.84,5.49,3.84,True,2026-05-10T05:10:26.239Z
+0bde45b2-3c1f-410a-bd69-d3479b3b20d4,Crafter's Secret Solid Cotton Yarn,2.09,2.99,2.09,True,2026-05-10T05:06:19.263Z
+8561296e-0b26-4f76-8a1f-f5f2e2da6202,Ombre Print I Love This Yarn,3.49,4.99,3.49,True,2026-05-10T05:09:08.999Z
+ae3eefb7-756e-4b1e-8f33-94ace39e5d15,Yarn Bee Scrub-Ology Cotton Yarn,4.19,5.99,4.19,True,2026-05-10T05:06:49.541Z
+039d7a30-f3c6-4279-8280-37f20b81f6aa,Yarn Bee Breathe Deep Super Bulky Yarn,9.79,13.99,9.79,True,2026-05-10T05:09:12.449Z
+a4707f91-b646-48f2-a5d4-da00c29240de,I Love This Chunky Print Yarn ,3.84,5.49,3.84,True,2026-05-10T05:12:24.147Z
+1abdcf37-32c3-4bbf-97e9-0d64242b8cdf,Yarn Bee Dream Spun Yarn,4.54,6.49,4.54,True,2026-05-10T05:11:05.244Z
+4f50f65d-b887-4519-b2b9-f097b0f5c6e7,Yarn Bee Braided Basics XXL,4.99,4.99,,,2026-05-10T05:06:41.591Z
+8a4def4c-6764-470e-9c60-813fd4abb8fe,Yarn Bee Pearlspun Low Pill Fiber Yarn,2.79,3.99,2.79,True,2026-05-10T05:06:26.082Z
+1be7883d-097f-4e82-b7d5-fa4a55f4d2c5,Yarn Bee Eternal Bliss Yarn,5.59,7.99,5.59,True,2026-05-10T05:09:28.097Z
+ff284fac-7e5d-4442-9b23-ad59971f6f1d,Yarn Bee Ethereal Eyelash Yarn,5.94,8.49,5.94,True,2026-05-10T05:07:46.199Z
+429e83c5-5d7d-4470-b6e5-ee0288b36006,Metallic I Love This Yarn,3.49,4.99,3.49,True,2026-05-10T05:08:56.142Z
+b916a2e4-2772-433e-a323-38823f77409f,Yarn Bee Braided Basics Small Yarn,4.99,4.99,,,2026-05-10T05:07:39.672Z
+2a4e94d8-4476-458b-a0e6-1d7015a8eb31,Yarn Bee Fundamental Cotton Yarn,3.84,5.49,3.84,True,2026-05-10T05:09:41.038Z
+0e214d6f-fc2a-4c76-8ed1-39d33a4a1f6e,Yarn Bee Simply Flawless Yarn,5.24,7.49,5.24,True,2026-05-10T05:09:08.795Z
+0c9bf109-b646-479e-b794-d2161aa4329a,Yarn Bee Scrub-Ology Yarn,2.79,3.99,2.79,True,2026-05-10T05:10:11.152Z
+2b38dda6-4ab3-41fe-84f3-225178af8da4,Gradient I Love This Yarn,3.49,4.99,3.49,True,2026-05-10T05:12:45.542Z
+c2525073-1afc-4fa2-887c-8aa87759eec6,Baby Bee Cuddly One Yarn,5.59,7.99,5.59,True,2026-05-10T05:10:18.026Z
+a84bac85-bf98-41d5-9817-37ed825d97fe,Stitch Soak Scrub Yarn,2.79,3.99,2.79,True,2026-05-10T05:11:38.180Z
+6b1e97ed-c5b0-469f-b70d-a18707259e47,Sport Weight I Love This Yarn,2.09,2.99,2.09,True,2026-05-10T05:10:12.661Z
+222c3f74-76f9-4496-90e4-b61d24cb66a7,Yarn Bee Fur The Moment Yarn,4.89,6.99,4.89,True,2026-05-10T05:09:57.983Z
+e0692259-f3cf-450b-a688-e49393603d30,Ombre Yarn Bee Soft Secret Yarn,4.19,5.99,4.19,True,2026-05-10T05:06:21.129Z
+06fc849a-5b14-4df7-8079-effea9b1eb4f,Yarn Bee Easygoing Yarn,3.49,4.99,3.49,True,2026-05-10T05:12:33.999Z
+99930ff2-47d2-4614-9449-1b1f5f75ac23,Yarn Bee Scrub-Ology Scrub It Yarn,3.49,4.99,3.49,True,2026-05-10T05:06:34.668Z
+e4ca2770-922b-4bb7-903a-4b1e9b56ba67,Yarn Bee Soft & Sleek Chunky Yarn,3.49,4.99,3.49,True,2026-05-10T05:10:53.790Z
+62325b03-d1bd-4823-8815-ed6d835cd498,Baby Bee Sweet Delight Wrap Yarn,4.19,5.99,4.19,True,2026-05-10T05:06:56.657Z
+2d3b292d-4409-429b-8fab-edc966e48e34,Yarn Bee Braided Basics Rope - 5mm,4.99,4.99,,,2026-05-10T05:10:06.007Z
+8c582f22-4c87-46a8-8d6b-ef89b10b69fb,Yarn Bee True Colors Yarn,3.49,4.99,3.49,True,2026-05-10T05:10:27.013Z
+8f240194-4908-4a91-9521-209723e5a55d,Yarn Bee Soft & Sleek DK Yarn,4.19,5.99,4.19,True,2026-05-10T05:09:50.703Z
+6d5c68e8-6c49-4dd4-bc70-6835fa5b4c45,Yarn Bee Scrub-Ology Cotton Yarn,4.19,5.99,4.19,True,2026-05-10T05:11:37.757Z
+1f5cbfad-e079-415e-9ce3-4c03b513a625,Yarn Bee Yarntopia Yarn,3.14,4.49,3.14,True,2026-05-10T05:08:27.538Z
+36197574-0587-4968-ac93-1ba9b1ad7985,Yarn Bee Velvety Smooth Sparkle Yarn,3.84,5.49,3.84,True,2026-05-10T05:08:43.769Z
+f9b89d02-65bb-4ff0-b2b0-65b3c93c5484,Yarn Bee Braided Basics String - 3mm,4.99,4.99,,,2026-05-10T05:12:21.540Z
+5e77b198-029b-4ab5-a7d8-1b29d76f2b76,I Love This Chunky Yarn,3.84,5.49,3.84,True,2026-05-10T05:10:50.691Z
+c9c8a1f1-eecd-4257-93b2-1b2e9593137d,Yarn Bee Authentic Hand-Dyed Yarn,16.79,23.99,16.79,True,2026-05-10T05:08:17.269Z
+6de4ba31-5ad2-47bb-8d37-8b5454579723,Yarn Bee Bamboo-Tiful Yarn,4.19,5.99,4.19,True,2026-05-10T05:10:59.317Z
+765df838-7a4c-423d-a8d7-69c9d3054d17,Baby Bee Adore-A-Ball Yarn,3.49,4.99,3.49,True,2026-05-10T05:07:38.016Z
+cb1565c7-bf24-4398-8db4-d3e640f1ada0,Yarn Bee Velvety Smooth Yarn,3.84,5.49,3.84,True,2026-05-10T05:10:01.377Z
+352a10f8-8d34-4879-b909-75507c6ea7ca,Sparkle Yarn Bee Soft & Sleek Yarn,3.84,5.49,3.84,True,2026-05-10T05:09:12.988Z
+f15ac9ac-14be-4223-8c21-fd88d3d192c5,Yarn Bee Effortless Super Bulky Yarn,6.99,9.99,6.99,True,2026-05-10T05:06:55.999Z
+2e9fa51d-e8df-47d6-875b-611421bea737,Baby Bee Sweet Delight Yarn,4.54,6.49,4.54,True,2026-05-10T05:11:41.031Z
+13c74707-310c-4009-8ab1-8564dc1a1e13,Yarn Bee Perfectly Plush Yarn,6.99,9.99,6.99,True,2026-05-10T05:06:17.471Z
+1044f207-1584-4040-80ed-bb8b68389826,Yarn Bee Dream Supreme Yarn,6.29,8.99,6.29,True,2026-05-10T05:07:42.646Z
+57df65b3-344f-4948-ab0c-554fb4ba86f4,Lion Brand Ice Cream Yarn,3.49,4.99,3.49,True,2026-05-10T05:07:54.949Z
+9750e288-b8e2-4304-ad30-0e46f760d39b,Yarn Bee Must Be Merino Aran Yarn,4.89,6.99,4.89,True,2026-05-10T05:06:10.292Z
+78e60eaf-7218-4a56-9ba4-8c0e583c5c77,Yarn Bee Chloe Yarn,5.59,7.99,5.59,True,2026-05-10T05:08:16.411Z
+11f371cf-c7bf-4e80-908a-837aac39f16a,Baby Bee Sweet Delight Pomp Yarn,4.19,5.99,4.19,True,2026-05-10T05:09:24.804Z
