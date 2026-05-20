@@ -1,0 +1,339 @@
+# Pythonista SQLite Database Visualizer
+# Save as: sqlite_visualizer.py
+#
+# Features:
+# - View all tables
+# - Browse table data
+# - Run custom SQL queries
+# - View schema/columns
+# - Export query results to CSV
+# - Dark-mode friendly UI
+#
+# Designed for Pythonista on iPad/iPhone
+
+import ui
+import sqlite3
+import csv
+import os
+import dialogs
+
+DB_NAME = 'hbyarninfo.db'
+
+
+class DatabaseVisualizer(ui.View):
+
+    def __init__(self):
+        self.name = 'SQLite Visualizer'
+        self.background_color = '#1e1e1e'
+        self.flex = 'WH'
+
+        self.conn = sqlite3.connect(DB_NAME)
+        self.cursor = self.conn.cursor()
+
+        self.setup_ui()
+        self.load_tables()
+
+    # =========================
+    # UI SETUP
+    # =========================
+
+    def setup_ui(self):
+
+        # LEFT PANEL
+        self.table_list = ui.TableView(
+            frame=(0, 0, 250, self.height),
+            flex='H'
+        )
+        self.table_list.delegate = self
+        self.table_list.data_source = self
+        self.add_subview(self.table_list)
+
+        # RIGHT PANEL CONTAINER
+        self.right_panel = ui.View(
+            frame=(250, 0, self.width - 250, self.height),
+            flex='WH'
+        )
+        self.right_panel.background_color = '#252526'
+        self.add_subview(self.right_panel)
+
+        # QUERY LABEL
+        self.query_label = ui.Label(
+            frame=(10, 10, 200, 30)
+        )
+        self.query_label.text = 'SQL Query'
+        self.query_label.text_color = 'white'
+        self.right_panel.add_subview(self.query_label)
+
+        # QUERY INPUT
+        self.query_input = ui.TextView(
+            frame=(10, 45, self.right_panel.width - 20, 120),
+            flex='W'
+        )
+        self.query_input.font = ('Menlo', 14)
+        self.query_input.text_color = 'white'
+        self.query_input.background_color = '#1e1e1e'
+        self.query_input.text = 'SELECT * FROM products_master LIMIT 25;'
+        self.right_panel.add_subview(self.query_input)
+
+        # RUN BUTTON
+        self.run_button = ui.Button(
+            frame=(10, 175, 120, 40)
+        )
+        self.run_button.title = 'Run Query'
+        self.run_button.background_color = '#007AFF'
+        self.run_button.tint_color = 'white'
+        self.run_button.corner_radius = 8
+        self.run_button.action = self.run_query
+        self.right_panel.add_subview(self.run_button)
+
+        # SCHEMA BUTTON
+        self.schema_button = ui.Button(
+            frame=(140, 175, 120, 40)
+        )
+        self.schema_button.title = 'Show Schema'
+        self.schema_button.background_color = '#34C759'
+        self.schema_button.tint_color = 'white'
+        self.schema_button.corner_radius = 8
+        self.schema_button.action = self.show_schema
+        self.right_panel.add_subview(self.schema_button)
+
+        # EXPORT BUTTON
+        self.export_button = ui.Button(
+            frame=(270, 175, 120, 40)
+        )
+        self.export_button.title = 'Export CSV'
+        self.export_button.background_color = '#FF9500'
+        self.export_button.tint_color = 'white'
+        self.export_button.corner_radius = 8
+        self.export_button.action = self.export_csv
+        self.right_panel.add_subview(self.export_button)
+
+        # RESULT TEXT
+        self.results = ui.TextView(
+            frame=(10, 230,
+                   self.right_panel.width - 20,
+                   self.right_panel.height - 240),
+            flex='WH'
+        )
+
+        self.results.font = ('Menlo', 12)
+        self.results.text_color = 'white'
+        self.results.background_color = '#1e1e1e'
+        self.results.editable = False
+
+        self.right_panel.add_subview(self.results)
+
+    # =========================
+    # TABLE LIST
+    # =========================
+
+    def load_tables(self):
+
+        self.cursor.execute("""
+            SELECT name
+            FROM sqlite_master
+            WHERE type='table'
+            ORDER BY name
+        """)
+
+        self.tables = [row[0] for row in self.cursor.fetchall()]
+        self.table_list.reload()
+
+    def tableview_number_of_rows(self, tableview, section):
+        return len(self.tables)
+
+    def tableview_cell_for_row(self, tableview, section, row):
+
+        cell = ui.TableViewCell()
+
+        cell.background_color = '#252526'
+
+        label = cell.text_label
+        label.text = self.tables[row]
+        label.text_color = 'white'
+
+        return cell
+
+    def tableview_did_select(self, tableview, section, row):
+
+        table_name = self.tables[row]
+
+        query = f"SELECT * FROM {table_name} LIMIT 50;"
+        self.query_input.text = query
+
+        self.execute_query(query)
+
+    # =========================
+    # QUERY EXECUTION
+    # =========================
+
+    def run_query(self, sender):
+
+        query = self.query_input.text.strip()
+
+        if not query:
+            dialogs.hud_alert('No query entered')
+            return
+
+        self.execute_query(query)
+
+    def execute_query(self, query):
+
+        try:
+
+            self.cursor.execute(query)
+
+            # SELECT queries
+            if query.lower().startswith('select'):
+
+                rows = self.cursor.fetchall()
+
+                column_names = [
+                    desc[0]
+                    for desc in self.cursor.description
+                ]
+
+                output = ''
+
+                # COLUMN HEADERS
+                output += ' | '.join(column_names)
+                output += '\n'
+                output += '-' * 120
+                output += '\n'
+
+                # ROWS
+                for row in rows:
+
+                    clean_row = []
+
+                    for item in row:
+
+                        if item is None:
+                            clean_row.append('NULL')
+                        else:
+                            clean_row.append(str(item))
+
+                    output += ' | '.join(clean_row)
+                    output += '\n'
+
+                output += f'\n\nRows Returned: {len(rows)}'
+
+                self.results.text = output
+
+                self.last_query_results = rows
+                self.last_query_columns = column_names
+
+            else:
+                # INSERT / UPDATE / DELETE
+                self.conn.commit()
+
+                self.results.text = (
+                    'Query executed successfully.'
+                )
+
+        except Exception as e:
+
+            self.results.text = f'ERROR:\n\n{str(e)}'
+
+    # =========================
+    # SCHEMA VIEWER
+    # =========================
+
+    def show_schema(self, sender):
+
+        table_name = dialogs.input_alert(
+            'Table Schema',
+            'Enter table name:'
+        )
+
+        if not table_name:
+            return
+
+        try:
+
+            self.cursor.execute(
+                f"PRAGMA table_info({table_name})"
+            )
+
+            columns = self.cursor.fetchall()
+
+            output = f'SCHEMA FOR: {table_name}\n\n'
+
+            for col in columns:
+
+                output += (
+                    f'Column: {col[1]}\n'
+                    f'Type: {col[2]}\n'
+                    f'Nullable: {not col[3]}\n'
+                    f'Primary Key: {bool(col[5])}\n'
+                    f'----------------------\n'
+                )
+
+            self.results.text = output
+
+        except Exception as e:
+
+            self.results.text = str(e)
+
+    # =========================
+    # EXPORT CSV
+    # =========================
+
+    def export_csv(self, sender):
+
+        if not hasattr(self, 'last_query_results'):
+
+            dialogs.hud_alert('Run a SELECT query first')
+            return
+
+        filename = dialogs.input_alert(
+            'Export CSV',
+            'Filename:',
+            'query_export.csv'
+        )
+
+        if not filename:
+            return
+
+        try:
+
+            with open(filename, 'w',
+                      newline='',
+                      encoding='utf-8') as f:
+
+                writer = csv.writer(f)
+
+                writer.writerow(self.last_query_columns)
+
+                writer.writerows(self.last_query_results)
+
+            dialogs.hud_alert(
+                f'Exported to {filename}',
+                'success'
+            )
+
+        except Exception as e:
+
+            dialogs.hud_alert(str(e), 'error')
+
+    # =========================
+    # CLEANUP
+    # =========================
+
+    def will_close(self):
+
+        self.conn.close()
+
+
+# =============================
+# APP START
+# =============================
+
+if __name__ == '__main__':
+
+    view = DatabaseVisualizer()
+
+    view.present(
+        'fullscreen',
+        hide_title_bar=False
+    )
